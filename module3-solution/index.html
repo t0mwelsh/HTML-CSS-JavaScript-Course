@@ -4,27 +4,75 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-      <!--need jQuery in bootstrap/js folder-->
-
-    <title>Bootstrap Starter Page</title>
+    <title>Food, LLC</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="css/styles.css">-->
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 <body>
 
-  <h1>Hello Coursera!</h1>
+  <header>
+    <nav class="navbar">
+      <div id="navbar-div" class="container-fluid">
+          <a class="navbar-brand" href="index.html"><h1>Food, LLC</h1></a>
+          <button class="navbar-toggler d-block d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>      
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#chicken">Chicken</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#beef">Beef</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sushi">Sushi</a>
+                </li>
+            </ul>
+        </div>
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <div id="main-content" class="container-fluid">
+    <h2 id="top" class="text-center">Our Menu</h2>
+
+    <div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="inner">
+          <h3 id="chicken" class="menu-item"> Chicken </h3> 
+          <p>Indulge in our succulent Chicken selections, a perfect fusion of flavors and tenderness. From sizzling grilled chicken breast to our signature creamy chicken Alfredo, every dish is a testament to culinary excellence. Our expert chefs have crafted these dishes to perfection, ensuring a delightful experience that satisfies every palate. Whether you prefer it grilled, sautéed, or marinated, our Chicken offerings are a feast that promises satisfaction in every bite. <a href = #top class="d-inline d-sm-none">Back to top</a></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class ="inner">
+          <h3 id="beef" class="menu-item"> Beef </h3> 
+          <p>Experience the rich and hearty flavors of our Beef creations, masterfully prepared to elevate your dining experience. Sink your teeth into our mouthwatering prime rib steak, cooked to your preference and seasoned with our secret blend of spices. From tender filet mignon to juicy ribeye, our Beef dishes showcase the finest cuts, paired with delectable sauces and accompaniments that enhance the taste. <a href = #top class="d-inline d-sm-none">Back to top</a></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="inner">
+          <h3 id="sushi" class="menu-item"> Sushi </h3> 
+          <p>Embark on a culinary journey with our exquisite Sushi selections, meticulously handcrafted by our skilled sushi chefs. Dive into the art of flavors with our signature Rainbow Roll, a vibrant combination of fresh fish and delicate rice. From traditional favorites like nigiri and sashimi to innovative creations that push the boundaries of taste, our Sushi menu offers a symphony of textures and tastes that captivate the senses. <a href = #top class="d-inline d-md-none">Back to top</a></p>
+        </div>
+      </div>
+    </div><!-- End of #home-tiles -->
+  </div><!-- End of #main-content -->
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-3.7.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!--<script src="js/script.js"></script>-->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript to hide dropdown menu when button disappears -->
+    <script>
+        $(window).on('resize', function() {
+            if ($(window).width() >= 576) { // Change the breakpoint as needed
+                $('#navbarNav').collapse('hide');
+            }
+        });
+    </script>
+
 </body>
 </html>
